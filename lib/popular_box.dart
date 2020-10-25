@@ -59,7 +59,7 @@ class PopularBox extends StatelessWidget {
               alignment: Alignment.topLeft,
               margin: EdgeInsets.only(left: 20),
               child: Text(
-                'Darjeeling',
+                placename,
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
               ),
             ),
