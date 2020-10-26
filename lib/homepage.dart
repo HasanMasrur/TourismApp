@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:TourismApp/destinations_box.dart';
 import 'package:TourismApp/popular_box.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,7 +19,7 @@ class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.black54,
+      //  backgroundColor: Colors.black54,
       key: _globalKey,
       drawer: Drawer(),
       body: SingleChildScrollView(
@@ -29,7 +28,7 @@ class _HomePage extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 50, left: 15),
+              margin: EdgeInsets.only(top: 35, left: 15),
               height: 50,
               child: Row(
                 children: [
@@ -56,6 +55,9 @@ class _HomePage extends State<HomePage> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
             Container(
               margin: EdgeInsets.only(left: 15),
               alignment: Alignment.topLeft,
@@ -68,7 +70,7 @@ class _HomePage extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Container(
               margin: EdgeInsets.only(left: 20),
@@ -79,7 +81,7 @@ class _HomePage extends State<HomePage> {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 20,
             ),
             Container(
               height: 230,
@@ -89,7 +91,7 @@ class _HomePage extends State<HomePage> {
                 children: [
                   PopularBox(
                     image: AssetImage('assets/darjeeling.jpg'),
-                    placename: "darjeeling",
+                    placename: "Darjeeling",
                   ),
                   SizedBox(
                     width: 10,
@@ -116,11 +118,19 @@ class _HomePage extends State<HomePage> {
               child: ListView(
                 scrollDirection: Axis.vertical,
                 children: [
-                  DestinationsBox(),
+                  DestinationsBox(
+                    countryname: "India",
+                    placename: "Derjeeling",
+                    image: AssetImage('assets/darjeeling.jpg'),
+                  ),
                   SizedBox(
                     height: 10,
                   ),
-                  DestinationsBox(),
+                  DestinationsBox(
+                    countryname: "India",
+                    placename: "Sikkim",
+                    image: AssetImage('assets/Sikkim.png'),
+                  ),
                 ],
               ),
             )

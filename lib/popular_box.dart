@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class PopularBox extends StatelessWidget {
-  String placename;
-  ImageProvider image;
+  final String placename;
+  final ImageProvider image;
   PopularBox({
     this.placename,
     this.image,
