@@ -19,7 +19,7 @@ class _HomePage extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      //  backgroundColor: Colors.black54,
+      backgroundColor: Color(0xFFF5F5DC),
       key: _globalKey,
       drawer: Drawer(),
       body: SingleChildScrollView(

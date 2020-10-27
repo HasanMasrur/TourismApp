@@ -13,8 +13,14 @@ class DestinationsBox extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.all(Radius.circular(10))),
+          //    color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+                color: Colors.white.withOpacity(0.5),
+                spreadRadius: 2,
+                blurRadius: 3,
+                offset: Offset(0, 3))
+          ], borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Row(
         children: [
           Container(
@@ -68,7 +74,7 @@ class DestinationsBox extends StatelessWidget {
                       onRatingUpdate: (rating) {
                         print(rating);
                       },
-                    ))
+                    )),
               ],
             ),
           )
