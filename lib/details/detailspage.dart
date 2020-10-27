@@ -185,7 +185,7 @@ class _DetailsPage extends State<DetailsPage> {
               ),
             ),
             top: 230,
-            left: 330,
+            left: 340,
           ),
         ],
       ),
