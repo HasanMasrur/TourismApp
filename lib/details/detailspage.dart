@@ -177,11 +177,11 @@ class _DetailsPage extends State<DetailsPage> {
           ),
           Positioned(
             child: CircleAvatar(
-              backgroundColor: Colors.white,
+              backgroundColor: Colors.red,
               radius: 20,
               child: Icon(
                 Icons.favorite,
-                color: Colors.red,
+                color: Colors.white,
               ),
             ),
             top: 230,
