@@ -136,6 +136,7 @@ class _DetailsPage extends State<DetailsPage> {
                               col1 = Colors.green;
                               col2 = Colors.white;
                               col3 = Colors.white;
+                              print('text1');
                             });
                           },
                         ),
@@ -152,6 +153,7 @@ class _DetailsPage extends State<DetailsPage> {
                               col2 = Colors.green;
                               col1 = Colors.white;
                               col3 = Colors.white;
+                              print('text2');
                             });
                           },
                         ),
@@ -168,6 +170,7 @@ class _DetailsPage extends State<DetailsPage> {
                               col3 = Colors.green;
                               col2 = Colors.white;
                               col1 = Colors.white;
+                              print('text3');
                             });
                           },
                         ),
@@ -190,7 +193,7 @@ class _DetailsPage extends State<DetailsPage> {
                         width: 350,
                         alignment: Alignment.center,
                         child: Text(
-                          "Bock Now",
+                          "Book Now",
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 15,
