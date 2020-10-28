@@ -10,6 +10,10 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPage extends State<DetailsPage> {
+  Color col1 = Colors.white;
+  Color col2 = Colors.white;
+  Color col3 = Colors.white;
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -126,6 +130,14 @@ class _DetailsPage extends State<DetailsPage> {
                           time: "3 day",
                           money: "10000k",
                           packagename: "silver",
+                          color: col1,
+                          ontop: () {
+                            setState(() {
+                              col1 = Colors.green;
+                              col2 = Colors.white;
+                              col3 = Colors.white;
+                            });
+                          },
                         ),
                         SizedBox(
                           width: 17,
@@ -134,6 +146,14 @@ class _DetailsPage extends State<DetailsPage> {
                           time: "5 day",
                           money: "15000k",
                           packagename: "Gold",
+                          color: col2,
+                          ontop: () {
+                            setState(() {
+                              col2 = Colors.green;
+                              col1 = Colors.white;
+                              col3 = Colors.white;
+                            });
+                          },
                         ),
                         SizedBox(
                           width: 17,
@@ -142,6 +162,14 @@ class _DetailsPage extends State<DetailsPage> {
                           time: "7 day",
                           money: "20000k",
                           packagename: "Platinum",
+                          color: col3,
+                          ontop: () {
+                            setState(() {
+                              col3 = Colors.green;
+                              col2 = Colors.white;
+                              col1 = Colors.white;
+                            });
+                          },
                         ),
                       ]),
                     ),
