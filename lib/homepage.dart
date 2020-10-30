@@ -1,9 +1,13 @@
+import 'dart:convert';
 import 'dart:ui';
 
 import 'package:TourismApp/destinations_box.dart';
+import 'package:TourismApp/model/Modeldata.dart';
+import 'package:TourismApp/model/model.dart';
 import 'package:TourismApp/popular_box.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,6 +18,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePage extends State<HomePage> {
   GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
+  @override
+  void initState() {
+    Modeldata modeldata = Modeldata();
+    modeldata.fatchUserinfo();
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

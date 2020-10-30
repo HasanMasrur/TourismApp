@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
 
 class User {
-  final String placename;
-  final Image image;
+  String id;
+  String placename;
+  String gold;
+  String silver;
+  String discription;
+  String platinum;
 
-  User({@required this.image, @required this.placename});
+  User({
+    @required this.id,
+    @required this.gold,
+    @required this.placename,
+    @required this.discription,
+    @required this.platinum,
+    @required this.silver,
+  });
 }
