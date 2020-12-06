@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class DestinationsBox extends StatelessWidget {
-  final String countryname;
-  final String placename;
-  final ImageProvider image;
+import 'model/model.dart';
 
-  DestinationsBox({this.countryname, this.placename, this.image});
+class DestinationsBox extends StatelessWidget {
+  final User data;
+
+  DestinationsBox({this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,8 @@ class DestinationsBox extends StatelessWidget {
             height: 80,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
-                image: DecorationImage(image: image, fit: BoxFit.fill)),
+                image: DecorationImage(
+                    image: NetworkImage(data.image), fit: BoxFit.fill)),
           ),
           SizedBox(
             width: 20,
@@ -40,7 +41,7 @@ class DestinationsBox extends StatelessWidget {
                 Container(
                   height: 15,
                   alignment: Alignment.topLeft,
-                  child: Text(placename),
+                  child: Text(data.placename),
                 ),
                 SizedBox(
                   height: 05,
@@ -48,7 +49,7 @@ class DestinationsBox extends StatelessWidget {
                 Container(
                   alignment: Alignment.topLeft,
                   height: 15,
-                  child: Text(countryname),
+                  child: Text(data.placename),
                 ),
                 SizedBox(
                   height: 10,
