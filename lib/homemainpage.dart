@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+import 'package:scoped_model/scoped_model.dart';
 import 'homepage.dart';
 import 'model/Modeldata.dart';
 
@@ -11,6 +12,7 @@ class HomeMainPage extends StatefulWidget {
 }
 
 class _HomeMainPage extends State<HomeMainPage> {
+  GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
   @override
   void initState() {
     widget.model.fatchprofiledata();
@@ -19,20 +21,22 @@ class _HomeMainPage extends State<HomeMainPage> {
     super.initState();
   }
 
-  Widget _buildAmbuliceList() {
+  @override
+  _buildAmbuliceList() {
+    print(widget.model.userdatalist.length);
     return Scaffold(
         body: Container(
       decoration: BoxDecoration(color: Colors.white),
-      child: Consumer<Modeldata>(
-        builder: (context, modeldata, child) {
+      child: ScopedModelDescendant<Modeldata>(
+        builder: (context, child, modeldata) {
           Widget conten = Center(
-            child: Text("There have no data"),
+            child: Text('there have no data'),
           );
-          print(widget.model.userdatalist.length);
           if (modeldata.userdatalist.length > 0 && !modeldata.isloading) {
-            return conten = HomePage();
+            conten = HomePage();
+            print('done');
           } else if (modeldata.isloading) {
-            return conten = Center(
+            conten = Center(
               child: CircularProgressIndicator(
                 backgroundColor: Colors.red,
               ),

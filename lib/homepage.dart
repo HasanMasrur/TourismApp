@@ -3,13 +3,13 @@ import 'dart:ui';
 import 'package:TourismApp/destinations_box.dart';
 import 'package:TourismApp/model/Modeldata.dart';
 
-import 'package:TourismApp/popular_box.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 import 'destinations_box.dart';
 import 'model/Modeldata.dart';
+import 'popular_box.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,8 +34,12 @@ class _HomePage extends State<HomePage> {
         backgroundColor: Color(0xFFF5F5DC),
         key: _globalKey,
         drawer: Drawer(),
-        body: Consumer<Modeldata>(
-          builder: (context, modeldata, child) {
+        body: ScopedModelDescendant<Modeldata>(
+          builder: (
+            context,
+            child,
+            modeldata,
+          ) {
             return SingleChildScrollView(
               child: Column(
                 // crossAxisAlignment: CrossAxisAlignment.start,
@@ -102,12 +106,12 @@ class _HomePage extends State<HomePage> {
                       height: 230,
                       margin: EdgeInsets.only(right: 10),
                       child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
                           itemCount: modeldata.userdatalist.length,
                           itemBuilder: (context, index) {
                             final data = modeldata.userdatalist[index];
-                            return DestinationsBox(
-                              data: data,
-                            );
+                            print(data);
+                            return PopularBox(data);
                           })),
                   Container(
                     height: 20,

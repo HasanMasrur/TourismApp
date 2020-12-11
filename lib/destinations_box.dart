@@ -4,7 +4,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'model/model.dart';
 
 class DestinationsBox extends StatelessWidget {
-  final User data;
+  final Userss data;
 
   DestinationsBox({this.data});
 

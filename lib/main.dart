@@ -1,11 +1,7 @@
-import 'package:TourismApp/homemainpage.dart';
-import 'package:TourismApp/homepage.dart';
-import 'package:TourismApp/mainpage.dart';
 import 'package:TourismApp/model/Modeldata.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import 'model/Modeldata.dart';
+import 'package:scoped_model/scoped_model.dart';
+import 'homemainpage.dart';
 import 'model/Modeldata.dart';
 
 void main() {
@@ -13,18 +9,18 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  Modeldata modeldata = Modeldata();
+  final Modeldata modeldata = Modeldata();
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => Modeldata(),
+    return ScopedModel<Modeldata>(
+      model: modeldata,
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: HomeMain(modeldata),
+        home: HomeMainPage(modeldata),
       ),
     );
   }

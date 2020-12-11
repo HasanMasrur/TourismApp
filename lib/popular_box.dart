@@ -2,13 +2,11 @@ import 'package:TourismApp/details/detailspage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import 'model/model.dart';
+
 class PopularBox extends StatelessWidget {
-  final String placename;
-  final ImageProvider image;
-  PopularBox({
-    this.placename,
-    this.image,
-  });
+  final Userss data;
+  PopularBox(this.data);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -33,7 +31,7 @@ class PopularBox extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     image: DecorationImage(
-                      image: image,
+                      image: NetworkImage(data.image),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -66,7 +64,7 @@ class PopularBox extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 margin: EdgeInsets.only(left: 20),
                 child: Text(
-                  placename,
+                  data.placename,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
               ),

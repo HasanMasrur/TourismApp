@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-class User {
+class Userss {
   String id;
   String placename;
   String gold;
   String image;
   String silver;
   String discription;
-  String platinum;
+  String paltinum;
 
-  User({
+  Userss({
     @required this.id,
     @required this.gold,
     @required this.image,
     @required this.placename,
     @required this.discription,
-    @required this.platinum,
+    @required this.paltinum,
     @required this.silver,
   });
 }
