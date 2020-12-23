@@ -124,7 +124,7 @@ class _HomePage extends State<HomePage> {
                     ),
                   ),
                   Container(
-                      height: 210,
+                      height: 500,
                       margin: EdgeInsets.only(left: 20),
                       child: ListView.builder(
                           itemCount: modeldata.userdatalist.length,

@@ -11,16 +11,18 @@ class DestinationsBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.only(top: 10, left: 10, right: 20),
+      width: 400,
       decoration: BoxDecoration(
-          //    color: Colors.white,
+          color: Color(0xFFF5F5DC),
           boxShadow: [
             BoxShadow(
                 color: Colors.white.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 3,
                 offset: Offset(0, 3))
-          ], borderRadius: BorderRadius.all(Radius.circular(10))),
+          ],
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Row(
         children: [
           Container(

@@ -10,7 +10,7 @@ class Packages_box extends StatelessWidget {
       {this.packagename, this.time, this.money, this.ontop, this.color});
   @override
   Widget build(BuildContext context) {
-    Color color = this.color;
+    //Color color = this.color;
     return GestureDetector(
       onTap: ontop,
       child: Container(
