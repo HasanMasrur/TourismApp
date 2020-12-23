@@ -141,7 +141,7 @@ class _DetailsPage extends State<DetailsPage> {
                           },
                         ),
                         SizedBox(
-                          width: 17,
+                          width: 12,
                         ),
                         Packages_box(
                           time: "5 day",
@@ -158,7 +158,7 @@ class _DetailsPage extends State<DetailsPage> {
                           },
                         ),
                         SizedBox(
-                          width: 17,
+                          width: 12,
                         ),
                         Packages_box(
                           time: "7 day",

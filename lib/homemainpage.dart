@@ -53,9 +53,6 @@ class _HomeMainPage extends State<HomeMainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Page"),
-      ),
       body: _buildAmbuliceList(),
     );
   }

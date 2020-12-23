@@ -17,7 +17,7 @@ class Packages_box extends StatelessWidget {
         decoration: BoxDecoration(
             color: color, borderRadius: BorderRadius.all(Radius.circular(15))),
         height: 60,
-        width: 108,
+        width: 100,
         child: Column(
           children: [
             Container(
